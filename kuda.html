@@ -5,28 +5,25 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="container">
+	<div class="container">
 		<div class="carrousel">
-			<img class="banner" src="https://www.static-src.com/siva/asset/03_2018/cantik-car-0703.jpg">
-			<img class="banner" src="https://www.static-src.com/siva/asset/03_2018/uni-somarch-carousel.jpg">
-			<img class="banner" src="https://www.static-src.com/siva/asset/03_2018/beautyresolutions-homepageDSKTP.jpg">
-			<img class="banner" src="https://www.static-src.com/siva/asset/03_2018/Top-Spender-AIA-Carousel2.jpg">
-			<div class="button-navigation">
-				<button style="" class="left button navigation" onclick="change(false)"><</button>
-				<button style="" class="right button navigation" onclick="change(true)">></button>
-			</div>
+			<img class="banner" src="http://gambarpedia.org/wp-content/uploads/2017/10/Gambar-Kuda-Poni-Cantik.jpg">
+			<img class="banner" src="https://farm9.static.flickr.com/8357/8320797454_67ccb153f9_b.jpg">
+			<img class="banner" src="https://farm7.static.flickr.com/6166/6232711965_e1a9e4c3b4_b.jpg">
+			<img class="banner" src="https://farm8.static.flickr.com/7348/9398097686_bd14d728b4_b.jpg">
+		</div>
+		<div class="button-navigation">
+			<button style="" class="left button navigation" onclick="change(false)"><</button>
+			<button style="" class="right button navigation" onclick="change(true)">></button>
 		</div>
 		<div class="button-info">
-			<button style="" class="info button" onclick="stopInterval();alert("Interval Off")">Stop</button>
-			<button style="" class="info button" onclick="startInterval();alert("Interval Off")">Interval</button>
+			<button style="" class="info button" onclick="stopInterval()">Stop</button>
+			<button style="" class="info button" onclick="startInterval()">Interval</button>
 		</div>
 	</div>
-
-</body>
-</html>
 	<script type="text/javascript">
 		var holder =document.getElementsByClassName("banner");
-		var a= []
+		
 		var next=1;
 		function init()
 		{
@@ -72,9 +69,11 @@
 		{
 		    clearInterval(interval);
 		}
-		
 		function startInterval()
 		{
 			interval=setInterval(function(){ change(1)}, 5000);
 		}
 	</script>
+</body>
+</html>
+<!-- asda dasdas-->
