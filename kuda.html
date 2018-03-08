@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+		<div class="carrousel">
+			<img class="banner" src="https://www.static-src.com/siva/asset/03_2018/cantik-car-0703.jpg">
+			<img class="banner" src="https://www.static-src.com/siva/asset/03_2018/uni-somarch-carousel.jpg">
+			<img class="banner" src="https://www.static-src.com/siva/asset/03_2018/beautyresolutions-homepageDSKTP.jpg">
+			<img class="banner" src="https://www.static-src.com/siva/asset/03_2018/Top-Spender-AIA-Carousel2.jpg">
+			<div class="button-navigation">
+				<button style="" class="left button navigation" onclick="change(false)"><</button>
+				<button style="" class="right button navigation" onclick="change(true)">></button>
+			</div>
+		</div>
+		<div class="button-info">
+			<button style="" class="info button" onclick="stopInterval();alert("Interval Off")">Stop</button>
+			<button style="" class="info button" onclick="startInterval();alert("Interval Off")">Interval</button>
+		</div>
+	</div>
+
+</body>
+</html>
+	<script type="text/javascript">
+		var holder =document.getElementsByClassName("banner");
+		var a= []
+		var next=1;
+		function init()
+		{
+			next=0;
+			change(1);
+			stopInterval();
+		}
+		init();
+
+		function maju()
+		{
+			if(next==3)
+				next=0;
+			else
+				next++;
+		}
+		function mundur()
+		{
+			if(next==0)
+				next=3;
+			else
+				next--;
+		}
+		function nextpic(arah)
+		{
+			if(arah==true)
+				maju();
+			else
+				mundur(); 
+		}
+		function change(arah)
+		{
+			nextpic(arah);
+			for(i=0;i<4;i++)
+			{
+				holder[i].style.display="none";
+			}
+			holder[next].style.display="block";
+		}
+		var interval;
+
+		function stopInterval()
+		{
+		    clearInterval(interval);
+		}
+		
+		function startInterval()
+		{
+			interval=setInterval(function(){ change(1)}, 5000);
+		}
+	</script>
